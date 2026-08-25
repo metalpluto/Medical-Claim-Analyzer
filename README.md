@@ -99,5 +99,3 @@ medical-claim-analyzer/
   appeals actually got approved)
 - Extract payer name and provider NPI as additional structured fields
 - Batch mode for processing a folder of denial letters at once
-## Learn more
-See [projectexplained.md](project-explained.md) for a full file-by-file breakdown of how the code works
