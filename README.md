@@ -69,7 +69,7 @@ accuracy — expected given the dataset's small size and clean category
 separation, not a claim about real-world performance. On messier,
 larger real-world denial text, the natural next step would be
 swapping the TF-IDF vectorizer for sentence embeddings and training
-on a much larger labeled set.
+on a much larger labeled set
 
 Retrain manually:
 
@@ -99,3 +99,5 @@ medical-claim-analyzer/
   appeals actually got approved)
 - Extract payer name and provider NPI as additional structured fields
 - Batch mode for processing a folder of denial letters at once
+## Learn more
+See [project-explained.md](project-explained.md) for a full file-by-file breakdown of how the code works

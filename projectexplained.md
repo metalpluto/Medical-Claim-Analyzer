@@ -60,7 +60,7 @@ The `extract()` function runs all five patterns against a piece of text and pack
 
 ## `src/agent.py`
 
-**What it is:** The "smart" part of the project — a LangGraph agent that takes the structured data from the extractor and classifier and decides what to actually *do* about the denial: draft an appeal letter, or recommend an internal fix
+**What it is:** The "smart" part of the project — a LangGraph agent that takes the structured data from the extractor and classifier and decides what to actually *do* about the denial, draft an appeal letter, or recommend an internal fix
 
 **Key concepts:**
 
