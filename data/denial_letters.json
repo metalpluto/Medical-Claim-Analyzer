@@ -1,0 +1,74 @@
+[
+  {
+    "text": "Claim number CLM-84421 for patient services rendered on 03/12/2026 has been denied. Reason: The requested procedure (CPT 29881) was performed without prior authorization on file. Please submit a retroactive authorization request or appeal with supporting documentation from the treating physician.",
+    "category": "missing_authorization"
+  },
+  {
+    "text": "This letter is to inform you that claim CLM-77213, submitted for CPT 99214 in the amount of $185.00, has been denied due to lack of medical necessity. Our clinical review team determined that the documentation submitted does not support the level of service billed for the diagnosis code M54.5.",
+    "category": "medical_necessity"
+  },
+  {
+    "text": "Denial notice for claim CLM-90012: CPT code 73721 was billed with an incorrect modifier. The claim as submitted does not match our coding guidelines for bilateral procedures. Please resubmit with the correct modifier -50 or -RT/-LT as appropriate.",
+    "category": "coding_error"
+  },
+  {
+    "text": "Your claim CLM-55302 dated for services on 11/02/2025 was received on 01/20/2026, which exceeds our 60-day timely filing limit from the date of service. As a result, this claim has been denied for untimely filing.",
+    "category": "timely_filing"
+  },
+  {
+    "text": "We regret to inform you that claim CLM-63188 has been denied because the patient was not eligible for coverage under this plan on the date of service, 02/14/2026. Please verify eligibility and resubmit if coverage was active at another payer.",
+    "category": "eligibility_issue"
+  },
+  {
+    "text": "Claim CLM-99045 for CPT 97110 has been flagged as a duplicate submission. A claim for the same date of service, procedure, and provider was already processed and paid on 12/01/2025 under claim number CLM-98811.",
+    "category": "duplicate_claim"
+  },
+  {
+    "text": "The prior authorization for CPT 27447 (total knee replacement) was not obtained before the procedure was performed on 04/03/2026. This claim, CLM-71190, is denied pending submission of a valid pre-authorization number.",
+    "category": "missing_authorization"
+  },
+  {
+    "text": "Claim CLM-41029 billed under diagnosis code I10 was reviewed and denied. Our medical review determined the requested MRI (CPT 72148) does not meet clinical criteria for medical necessity per our coverage policy.",
+    "category": "medical_necessity"
+  },
+  {
+    "text": "This is a denial for claim CLM-33021. The CPT code billed, 45380, does not align with the diagnosis code submitted, K51.90. Please review and correct the coding before resubmission.",
+    "category": "coding_error"
+  },
+  {
+    "text": "Claim CLM-20044 for date of service 08/15/2025 was submitted 95 days after the service date, exceeding the payer's 90-day timely filing requirement. The claim is denied on this basis.",
+    "category": "timely_filing"
+  },
+  {
+    "text": "Coverage verification shows the member's policy, plan ID 445982, was terminated effective 01/01/2026, prior to the date of service on claim CLM-58820 (01/15/2026). This claim is denied due to eligibility issues.",
+    "category": "eligibility_issue"
+  },
+  {
+    "text": "Our system identified claim CLM-10233 as a duplicate of a previously adjudicated claim, CLM-10199, for the same CPT 71046 and date of service. This claim has been denied as a duplicate.",
+    "category": "duplicate_claim"
+  },
+  {
+    "text": "Authorization number provided for claim CLM-66210 does not match our records for the requested CPT 64483 (epidural injection). Denied pending confirmation of a valid pre-authorization.",
+    "category": "missing_authorization"
+  },
+  {
+    "text": "The requested physical therapy sessions (CPT 97530) billed on claim CLM-30281 exceed the number of visits deemed medically necessary based on the submitted treatment plan and diagnosis M25.561.",
+    "category": "medical_necessity"
+  },
+  {
+    "text": "Claim CLM-88102 was denied because the units billed for CPT 96372 (3 units) exceed the maximum allowed per our coding edits for a single date of service without appropriate modifier.",
+    "category": "coding_error"
+  },
+  {
+    "text": "The 180-day timely filing deadline for claim CLM-15590, with a date of service of 06/01/2025, was missed. Claim received on 12/15/2025 and is therefore denied.",
+    "category": "timely_filing"
+  },
+  {
+    "text": "Patient's coverage under group plan 5521 was not active on the reported date of service for claim CLM-40098. Please confirm active coverage and resubmit with corrected insurance information.",
+    "category": "eligibility_issue"
+  },
+  {
+    "text": "Claim CLM-71400 for CPT 93000 was denied as a duplicate; an identical claim, CLM-71355, was already paid for the same provider, date, and procedure code.",
+    "category": "duplicate_claim"
+  }
+]
