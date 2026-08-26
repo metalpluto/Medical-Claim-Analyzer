@@ -76,6 +76,17 @@ Retrain manually:
 ```bash
 python -m src.classifier
 ```
+## Testing
+
+Extraction and classification are pure, offline functions, so they're
+fully covered by unit tests no API key or network access needed
+
+```bash
+python -m pytest tests/ -v
+```
+
+The agent step isn't unit tested here since it depends on a live LLM
+call; the tests focus on the deterministic core of the pipeline
 
 ## Project structure
 
