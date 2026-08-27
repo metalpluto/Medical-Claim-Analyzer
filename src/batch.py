@@ -3,7 +3,7 @@ batch.py
 
 Batch mode: process every denial letter (.txt file) in a folder at
 once, instead of one file at a time, and write a single CSV summary
-report covering all of them.
+report covering all of them
 """
 
 import csv
