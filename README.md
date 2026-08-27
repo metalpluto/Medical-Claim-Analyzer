@@ -65,7 +65,7 @@ python main.py --file letter.txt   # analyze your own denial letter
 The classifier trains on `data/denial_letters.json`, a small synthetic
 dataset (18 labeled examples across 6 categories) written to resemble
 real payer denial language. On a held-out split it reaches 100%
-accuracy — expected given the dataset's small size and clean category
+accuracy expected given the dataset's small size and clean category
 separation, not a claim about real-world performance. On messier,
 larger real-world denial text, the natural next step would be
 swapping the TF-IDF vectorizer for sentence embeddings and training
