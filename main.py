@@ -7,11 +7,13 @@ Usage:
     python main.py                     # run on a built-in sample letter
     python main.py --no-agent          # skip the LangGraph agent step
     python main.py --file letter.txt   # analyze your own letter
+    python main.py --batch some_folder
 """
 
 import argparse
 import json
 import os
+from src.batch import run_batch
 from dotenv import load_dotenv  
 from src.pipeline import analyze_letter
 
@@ -30,9 +32,15 @@ SAMPLE_LETTER = (
 def main():
     parser = argparse.ArgumentParser(description="Analyze a medical claim denial letter.")
     parser.add_argument("--file", type=str, help="Path to a .txt file containing the denial letter.")
+    parser.add_argument("--batch", type=str, help="path to a folder of .txt denial letters to proceed together.")
+    parser.add_argument("--output", type=str, default="batch_results.csv", help="CSV path for --batch results.")
     parser.add_argument("--no-agent", action="store_true", help="Skip the LangGraph agent step.")
     args = parser.parse_args()
 
+    if args.batch:
+        run_batch(args.batch, output_path=args.output, use_agent=not args.no_agent)
+        return 
+    
     if args.file:
         with open(args.file, encoding="utf-8") as f:
             text = f.read()

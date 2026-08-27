@@ -5,7 +5,7 @@ LangGraph agent that takes the structured output of extractor.py +
 classifier.py and decides what should happen next: either draft an
 appeal letter (for denials that are usually appealable) or recommend
 an internal fix (for denials that need correction before resubmission,
-like coding errors).
+like coding errors)
 
 Graph shape:
 
@@ -35,7 +35,7 @@ class ClaimState(TypedDict):
 APPEALABLE = {"medical_necessity", "missing_authorization", "eligibility_issue"}
 NEEDS_FIX = {"coding_error", "timely_filing", "duplicate_claim"}
 
-llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash", max_output_tokens=500)
+llm = ChatGoogleGenerativeAI(model="gemini-3.5-flash", max_output_tokens=2028)
 
 
 def _extract_text(content) -> str:
@@ -78,7 +78,7 @@ def route_action(state: ClaimState) -> str:
 
 
 def draft_appeal_node(state: ClaimState) -> ClaimState:
-    prompt = f"""You are a healthcare revenue cycle assistant. Draft a concise,
+    prompt = f"""You are a healthcare revenue cycle assistant draft a concise,
 professional appeal letter for this denied medical claim.
 
 Denial category: {state['category']}
@@ -87,7 +87,9 @@ Original denial text: {state['text']}
 
 Keep the appeal under 150 words, reference the claim number and codes,
 and clearly state why the denial should be reversed."""
+    
     response = llm.invoke(prompt)
+    print("FINISH REASON:", response.response_metadata.get("finish_reason"))
     state["output"] = _extract_text(response.content)
     return state
 

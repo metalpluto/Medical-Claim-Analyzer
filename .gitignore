@@ -1,3 +1,5 @@
 .env
 __pycache__/
 *.joblib
+batch_results.csv
+.pytest_cache/

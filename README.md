@@ -88,6 +88,18 @@ python -m pytest tests/ -v
 The agent step isn't unit tested here since it depends on a live LLM
 call; the tests focus on the deterministic core of the pipeline
 
+## Batch
+Added the ability to process a whole folder of denial letters in one
+run instead of one at a time. Each `.txt` file gets pushed through the
+full extraction + classification pipeline, and results are saved to a
+single CSV (`file`, `claim_number`, `category`, `confidence`,
+`agent_output`) for easy review in Excel or Google Sheets
+Tested with a batch of 4 sample letters from the training set (all
+predicted correctly), and separately with 4 handwritten letters using
+different phrasing the model had never seen 3 out of 4 predicted
+correctly. See [Known limitations](#known-limitations) for why the
+fourth one was misclassified
+
 ## Project structure
 
 ```
@@ -95,6 +107,7 @@ medical-claim-analyzer/
 ├── data/denial_letters.json   synthetic training data
 ├── model/                     saved trained classifier (generated)
 ├── src/
+│   ├── batch.py                batch mode: processes a folder of letters into one CSV
 │   ├── extractor.py           regex-based NLP entity extraction
 │   ├── classifier.py          TF-IDF + Logistic Regression classifier
 │   ├── agent.py                LangGraph agent
@@ -109,4 +122,17 @@ medical-claim-analyzer/
 - Add a real appeal-success feedback loop (agent learns which drafted
   appeals actually got approved)
 - Extract payer name and provider NPI as additional structured fields
-- Batch mode for processing a folder of denial letters at once
+
+
+
+## Known limitations
+- **Classifier accuracy is bounded by dataset size.** With only 18
+  labeled examples across 6 categories (~3 per category), the TF-IDF +
+  Logistic Regression classifier has limited signal to distinguish
+  categories that share vocabulary. For example, a `coding_error`
+  denial that mentions "does not support medical necessity" as part
+  of explaining a CPT/ICD-10 mismatch can get misclassified as
+  `medical_necessity`, since the model has too few examples to learn
+  that the phrase alone doesn't determine the category expanding the
+  dataset prioritizing varied phrasing per category over raw
+  volume is the direct fix
