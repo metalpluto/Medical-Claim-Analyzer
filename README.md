@@ -2,7 +2,7 @@
 
 An NLP + agent pipeline that reads an unstructured medical claim denial
 letter and turns it into something actionable: structured claim data,
-a predicted denial category, and a drafted appeal letter or internal
+a predicted denial category, and drafted appeal letter or internal
 fix recommendation
 
 Built to explore the same core problem healthcare revenue-cycle AI
