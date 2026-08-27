@@ -25,7 +25,7 @@ SAMPLE_LETTER = (
     "has been denied. Reason: The requested procedure (CPT 29881) was "
     "performed without prior authorization on file. Please submit a "
     "retroactive authorization request or appeal with supporting "
-    "documentation from the treating physician."
+    "documentation from the treating physician"
 )
 
 
