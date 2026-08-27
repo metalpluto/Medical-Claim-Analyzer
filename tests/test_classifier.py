@@ -27,7 +27,7 @@ VALID_CATEGORIES = {
 
 @pytest.fixture(scope="module")
 def trained_model():
-    # save=False: don't overwrite the committed model artifact just for tests
+    # save False: don't overwrite the committed model artifact just for tests
     return train(save=False)
 
 
